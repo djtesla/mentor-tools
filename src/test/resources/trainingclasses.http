@@ -1,0 +1,30 @@
+###
+GET http://localhost:8080/api/mentortools/trainingclasses/1
+Accept: application/json
+
+
+###
+POST http://localhost:8080/api/mentortools/trainingclasses
+Content-Type: application/json
+
+{
+  "name": "Java haladó",
+  "dateOfStart": "2021-06-01",
+  "dateOfFinish": "2021-08-10"
+}
+
+###
+PUT http://localhost:8080/api/mentortools/trainingclasses/1/name
+Content-Type: application/json
+
+{
+  "name": "Java backend haladó"
+}
+
+###
+DELETE http://localhost:8080/api/mentortools/trainingclasses/1
+Accept: application/json6
+
+
+###
+
