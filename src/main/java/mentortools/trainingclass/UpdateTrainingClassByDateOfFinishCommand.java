@@ -9,8 +9,11 @@ import java.time.LocalDate;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class UpdateNameCommand {
+public class UpdateTrainingClassByDateOfFinishCommand {
 
-    String name;
+    LocalDate dateOfFinish;
 
 }
+
+
+

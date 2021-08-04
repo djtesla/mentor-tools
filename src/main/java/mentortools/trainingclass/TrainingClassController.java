@@ -40,17 +40,17 @@ public class TrainingClassController {
     }
 
     @PutMapping("/{id}/name")
-    public TrainingClassDto updateTrainingClassByName(@PathVariable("id") long id, @RequestBody @Valid UpdateNameCommand command) {
+    public TrainingClassDto updateTrainingClassByName(@PathVariable("id") long id, @RequestBody @Valid UpdateTrainingClassByNameCommand command) {
         return trainingClassService.updateTrainingClassByName(id, command);
     }
 
     @PutMapping("/{id}/start")
-    public TrainingClassDto updateTrainingClassByDateOfStart(@PathVariable("id") long id, @RequestBody @Valid UpdateDateOfStartCommand command) {
+    public TrainingClassDto updateTrainingClassByDateOfStart(@PathVariable("id") long id, @RequestBody @Valid UpdateTrainingClassByDateOfStartCommand command) {
         return trainingClassService.updateTrainingClassByDateOfStart(id, command);
     }
 
     @PutMapping("/{id}/finish")
-    public TrainingClassDto updateTrainingClassByDateOfFinish(@PathVariable("id") long id, @RequestBody @Valid UpdateDateOfFinishCommand command) {
+    public TrainingClassDto updateTrainingClassByDateOfFinish(@PathVariable("id") long id, @RequestBody @Valid UpdateTrainingClassByDateOfFinishCommand command) {
         return trainingClassService.updateTrainingClassByDateOfFinish(id, command);
     }
 

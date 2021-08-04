@@ -9,7 +9,7 @@ import java.time.LocalDate;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class UpdateDateOfStartCommand {
+public class UpdateTrainingClassByDateOfStartCommand {
 
     LocalDate dateOfStart;
 

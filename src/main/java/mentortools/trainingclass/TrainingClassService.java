@@ -33,21 +33,21 @@ public class TrainingClassService {
     }
 
     @Transactional
-    public TrainingClassDto updateTrainingClassByName(long id, UpdateNameCommand command) {
+    public TrainingClassDto updateTrainingClassByName(long id, UpdateTrainingClassByNameCommand command) {
         TrainingClass trainingClass = trainingClassRepository.findById(id).orElseThrow(()->new EntityNotFoundException("TrainingClass cannot be found by id " + id));
         trainingClass.setName(command.getName());
         return modelMapper.map(trainingClass, TrainingClassDto.class);
     }
 
     @Transactional
-    public TrainingClassDto updateTrainingClassByDateOfStart(long id, UpdateDateOfStartCommand command) {
+    public TrainingClassDto updateTrainingClassByDateOfStart(long id, UpdateTrainingClassByDateOfStartCommand command) {
         TrainingClass trainingClass = trainingClassRepository.findById(id).orElseThrow(()->new EntityNotFoundException("TrainingClass cannot be found by id " + id));
         trainingClass.setDateOfStart(command.getDateOfStart());
         return modelMapper.map(trainingClass, TrainingClassDto.class);
     }
 
     @Transactional
-    public TrainingClassDto updateTrainingClassByDateOfFinish(long id, UpdateDateOfFinishCommand command) {
+    public TrainingClassDto updateTrainingClassByDateOfFinish(long id, UpdateTrainingClassByDateOfFinishCommand command) {
         TrainingClass trainingClass = trainingClassRepository.findById(id).orElseThrow(()->new EntityNotFoundException("TrainingClass cannot be found by id " + id));
         trainingClass.setDateOfFinish(command.getDateOfFinish());
         return modelMapper.map(trainingClass, TrainingClassDto.class);

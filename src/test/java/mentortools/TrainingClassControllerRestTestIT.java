@@ -2,7 +2,7 @@ package mentortools;
 
 import mentortools.trainingclass.CreateTrainingClassCommand;
 import mentortools.trainingclass.TrainingClassDto;
-import mentortools.trainingclass.UpdateNameCommand;
+import mentortools.trainingclass.UpdateTrainingClassByNameCommand;
 import org.flywaydb.core.Flyway;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -25,10 +25,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class TrainingClassControllerRestTestIT {
 
 
-    @Autowired
+   @Autowired
     TestRestTemplate template;
 
-    @Autowired
+   @Autowired
     Flyway flyway;
 
     @BeforeEach
@@ -67,7 +67,7 @@ public class TrainingClassControllerRestTestIT {
     void testUpdate() {
         template.postForObject("/api/mentortools/trainingclasses",
                 new CreateTrainingClassCommand("Java kezdő", LocalDate.of(2021, 6, 1), LocalDate.of(2021, 10, 1)), TrainingClassDto.class);
-        template.put("/api/mentortools/trainingclasses/1/name", new UpdateNameCommand("Java backend kezdő"));
+        template.put("/api/mentortools/trainingclasses/1/name", new UpdateTrainingClassByNameCommand("Java backend kezdő"));
         TrainingClassDto trainingClass = template.getForObject("/api/mentortools/trainingclasses/1",TrainingClassDto.class);
         assertEquals("Java backend kezdő", trainingClass.getName());
     }
