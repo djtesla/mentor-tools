@@ -15,7 +15,5 @@ public class CreateTrainingClassCommand {
     @Length(max = 255)
     String name;
     LocalDate dateOfStart;
-
-    
     LocalDate dateOfFinish;
 }
