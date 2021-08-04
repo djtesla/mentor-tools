@@ -18,13 +18,7 @@ public class StudentDto {
     private String email;
     private String gitHubUserName;
     private String comment;
-    private List<TrainingClass> trainingClasses;
 
-    public StudentDto(Long id, String name, String email, String gitHubUserName, String comment) {
-        this.id = id;
-        this.name = name;
-        this.email = email;
-        this.gitHubUserName = gitHubUserName;
-        this.comment = comment;
-    }
+
+
 }

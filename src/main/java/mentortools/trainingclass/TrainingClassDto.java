@@ -17,12 +17,8 @@ public class TrainingClassDto {
     String name;
     LocalDate dateOfStart;
     LocalDate dateOfFinish;
-    private List<Student> students;
 
-    public TrainingClassDto(Long id, String name, LocalDate dateOfStart, LocalDate dateOfFinish) {
-        this.id = id;
-        this.name = name;
-        this.dateOfStart = dateOfStart;
-        this.dateOfFinish = dateOfFinish;
-    }
+
+
+
 }

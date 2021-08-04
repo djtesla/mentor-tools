@@ -25,8 +25,6 @@ public class Student {
     private String gitHubUserName;
     private String comment;
 
-    @ManyToMany(mappedBy = "students")
-    private List<TrainingClass> trainingClasses;
 
     public Student(String name, String email, String gitHubUserName, String comment) {
         this.name = name;

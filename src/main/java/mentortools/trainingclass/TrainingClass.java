@@ -26,13 +26,7 @@ public class TrainingClass {
 
     LocalDate dateOfFinish;
 
-    @ManyToMany
-    @JoinTable(name = "trainingclass_student",
-            joinColumns = @JoinColumn(name = "trainingclass_id"),
-            inverseJoinColumns = @JoinColumn(name = "student_id"))
-    List<Student> students;
-
-    public TrainingClass(String name, LocalDate dateOfStart, LocalDate dateOfFinish) {
+       public TrainingClass(String name, LocalDate dateOfStart, LocalDate dateOfFinish) {
         this.name = name;
         this.dateOfStart = dateOfStart;
         this.dateOfFinish = dateOfFinish;
